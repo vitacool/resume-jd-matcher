@@ -4,6 +4,16 @@
 
 这个项目可以作为 AI Agent 的前置分析模块，也可以独立用于简历优化、岗位分析和求职准备。
 
+## 页面预览
+
+### 简历与岗位匹配分析
+
+![简历与岗位匹配分析](docs/images/analyze-overview.png)
+
+### 历史分析记录
+
+![历史分析记录](docs/images/history-detail.png)
+
 ## 功能特性
 
 - 简历与岗位 JD 匹配度评分
