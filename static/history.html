@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>历史分析记录</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Analysis History</p>
+        <h1>历史分析记录</h1>
+      </div>
+      <nav>
+        <a href="/">分析</a>
+        <a href="/history">历史记录</a>
+      </nav>
+    </header>
+
+    <main class="history-layout">
+      <section class="panel">
+        <div class="panel-title">
+          <h2>最近记录</h2>
+          <button id="refresh" type="button">刷新</button>
+        </div>
+        <div id="history-list" class="history-list"></div>
+      </section>
+
+      <section class="panel">
+        <h2>记录详情</h2>
+        <div id="detail" class="detail-empty">选择一条记录查看完整分析。</div>
+      </section>
+    </main>
+
+    <script src="/static/history.js"></script>
+  </body>
+</html>

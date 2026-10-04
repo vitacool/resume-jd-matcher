@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>智能简历匹配与岗位分析系统</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Resume JD Matcher</p>
+        <h1>智能简历匹配与岗位分析系统</h1>
+      </div>
+      <nav>
+        <a href="/">分析</a>
+        <a href="/history">历史记录</a>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <section class="panel input-panel">
+        <div class="panel-title">
+          <h2>输入内容</h2>
+          <button id="fill-demo" type="button">填充示例</button>
+        </div>
+
+        <label for="resume">简历文本</label>
+        <textarea id="resume" placeholder="粘贴你的简历项目经历、技术能力、教育背景等内容"></textarea>
+
+        <label for="jd">岗位 JD</label>
+        <textarea id="jd" placeholder="粘贴招聘岗位要求，例如 AI 应用开发实习生、Python、FastAPI、RAG、Agent 等"></textarea>
+
+        <button id="analyze" class="primary" type="button">开始分析</button>
+      </section>
+
+      <section class="panel result-panel">
+        <div class="panel-title">
+          <h2>匹配结果</h2>
+          <span id="status">等待分析</span>
+        </div>
+
+        <div class="score-row">
+          <div class="score-card">
+            <span id="score">--</span>
+            <small>匹配分</small>
+          </div>
+          <div>
+            <p id="level" class="level">暂无结果</p>
+            <p id="route" class="route">系统会根据 JD 给出适合强调的简历方向。</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div>
+            <h3>匹配关键词</h3>
+            <div id="matched" class="tags empty">暂无</div>
+          </div>
+          <div>
+            <h3>缺失关键词</h3>
+            <div id="missing" class="tags empty">暂无</div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div>
+            <h3>优势判断</h3>
+            <ul id="strengths"></ul>
+          </div>
+          <div>
+            <h3>修改建议</h3>
+            <ul id="suggestions"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
